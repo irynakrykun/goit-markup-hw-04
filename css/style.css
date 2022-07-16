@@ -8,6 +8,7 @@
   --background-color-btn: #188ce8;
   --card-sed-gap: 30px;
   --items: 3;
+  --color-social-link: #afb1b8;
 }
 /*другий колір тексту #757575/*/
 /*білий колір bgc/ --#FFFFFF*/
@@ -139,6 +140,20 @@ img {
   display: flex;
   gap: 50px;
 }
+.phone-svg,
+.mail-svg {
+  display: inline-block;
+  fill: var(--primery-text-color);
+  margin-right: 10px;
+}
+.phone-svg:hover,
+.phone-svg:focus {
+  fill: var(--accent-color);
+}
+.mail-svg:hover,
+.mail-svg:focus {
+  fill: var(--accent-color);
+}
 
 /********************************************Hero**********************************/
 .hero {
@@ -146,6 +161,17 @@ img {
   text-align: center;
   padding: 200px 0;
 }
+.overlay {
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/foto\ hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1600px;
+  height: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .hero-title {
   margin: 0 auto;
   width: 696px;
@@ -160,16 +186,17 @@ img {
 }
 .button {
   display: inline-block;
-  border: none;
   padding: 10px 32px;
   border-radius: 4px;
+  border: none;
+  margin-top: 30px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background-color: var(--accent-color);
   color: var(--primery-bgc-color);
   cursor: pointer;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
-
   letter-spacing: 0.06em;
 }
 .button:hover,
@@ -197,12 +224,24 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+.features-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  border: solid #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
 /*************************************************Section work********************************/
 .work {
   padding-top: 0;
 }
 .work-title,
-.team-title {
+.team-title,
+.client-title {
   margin-bottom: 50px;
   color: var(--title-text-color);
   font-weight: 700;
@@ -246,11 +285,72 @@ img {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  margin-bottom: 30px;
 }
+
+.team-socials-list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--primery-bgc-color);
+  border-radius: 50%;
+}
+.socials-icon {
+  fill: var(--color-social-link);
+}
+.socials-link :hover,
+.socials-link :focus {
+  background-color: var(--accent-color);
+}
+.socials-link :hover.socials-icon,
+.socials-link :focus.socials-icon {
+  fill: var(--primery-bgc-color);
+}
+
+/*******************************COMPANY-Clients**************************************************/
+.client-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 94px;
+}
+.client-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  background-color: var(--primery-bgc-color);
+  border-radius: 4px;
+  border: 1px solid var(--color-social-link);
+}
+.client-icon {
+  fill: var(--color-social-link);
+}
+.client-link :hover,
+.client-link :focus {
+  fill: var(--accent-color);
+}
+
 /**********************************************footer*************************************/
+
 .footer {
   background-color: var(--color-footer-header);
   padding: 60px 0;
+}
+.footer-container {
+  display: flex;
+  align-items: baseline;
 }
 .footer-logo {
   display: block;
@@ -289,6 +389,43 @@ address .link:focus {
 .adress-link:focus {
   color: var(--accent-color);
 }
+.footer-title {
+  flex-basis: 145px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primery-bgc-color);
+  margin-bottom: 20px;
+}
+.footer-link {
+  width: 206px;
+  height: 80px;
+}
+.footer-list-icon {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.footer-socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-icon {
+  fill: var(--primery-bgc-color);
+}
+.footer-socials-link :hover.footer-icon,
+.footer-socials-link :focus.footer-icon {
+  background-color: var(--accent-color);
+}
 
 /*********************************************Portfolio********************************************/
 .btn {
@@ -314,6 +451,8 @@ address .link:focus {
 .btn:focus {
   background-color: var(--accent-color);
   color: var(--primery-bgc-color);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08),
+    0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 /*Section-Portfolio*/
@@ -330,6 +469,11 @@ address .link:focus {
 }
 .portfolio-item > .link {
   display: block;
+}
+.portfolio-item > .link:focus,
+.portfolio-item > .link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-card {
   padding: 20px 24px;
