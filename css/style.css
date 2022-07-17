@@ -123,9 +123,10 @@ img {
 }
 
 .adress-list .link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  display: flex;
+  align-items: center;
+  padding-top: 31px;
+  padding-bottom: 31px;
   color: var(--primery-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -142,8 +143,7 @@ img {
 }
 .phone-svg,
 .mail-svg {
-  display: inline-block;
-  fill: var(--primery-text-color);
+  fill: currentColor;
   margin-right: 10px;
 }
 .phone-svg:hover,
@@ -166,6 +166,7 @@ img {
     url(../images/foto\ hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   max-width: 1600px;
   height: 600px;
   margin-right: auto;
@@ -230,7 +231,7 @@ img {
   justify-content: center;
   width: 270px;
   height: 120px;
-  border: solid #f5f4fa;
+  background-color: var(--primery-background-color-section);
   border-radius: 4px;
   margin-bottom: 30px;
 }
@@ -285,14 +286,13 @@ img {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .team-socials-list {
   display: flex;
   gap: 10px;
   justify-content: center;
-  align-items: center;
 }
 
 .socials-link {
@@ -301,45 +301,41 @@ img {
   justify-content: center;
   width: 44px;
   height: 44px;
-  background-color: var(--primery-bgc-color);
   border-radius: 50%;
+  color: var(--color-social-link);
 }
 .socials-icon {
-  fill: var(--color-social-link);
+  fill: currentColor;
 }
-.socials-link :hover,
-.socials-link :focus {
+.socials-link:hover,
+.socials-link:focus {
   background-color: var(--accent-color);
-}
-.socials-link :hover.socials-icon,
-.socials-link :focus.socials-icon {
-  fill: var(--primery-bgc-color);
+  color: var(--primery-bgc-color);
 }
 
 /*******************************COMPANY-Clients**************************************************/
 .client-list {
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 30px;
-  margin-bottom: 94px;
 }
+
 .client-link {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 170px;
   height: 92px;
-  background-color: var(--primery-bgc-color);
+  color: var(--color-social-link);
   border-radius: 4px;
   border: 1px solid var(--color-social-link);
 }
 .client-icon {
-  fill: var(--color-social-link);
+  fill: currentColor;
 }
-.client-link :hover,
-.client-link :focus {
-  fill: var(--accent-color);
+.client-link:hover,
+.client-link:focus {
+  background-color: var(--primery-bgc-color);
+  color: var(--accent-color);
 }
 
 /**********************************************footer*************************************/
@@ -389,7 +385,7 @@ address .link:focus {
 .adress-link:focus {
   color: var(--accent-color);
 }
-.footer-title {
+.footer-text {
   flex-basis: 145px;
   font-weight: 700;
   font-size: 14px;
@@ -402,6 +398,7 @@ address .link:focus {
 .footer-link {
   width: 206px;
   height: 80px;
+  margin-left: 70px;
 }
 .footer-list-icon {
   display: flex;
@@ -417,14 +414,16 @@ address .link:focus {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-social-link);
 }
 
 .footer-icon {
-  fill: var(--primery-bgc-color);
+  fill: currentColor;
 }
-.footer-socials-link :hover.footer-icon,
-.footer-socials-link :focus.footer-icon {
+.footer-socials-link:hover,
+.footer-socials-link:focus {
   background-color: var(--accent-color);
+  color: var(--primery-bgc-color);
 }
 
 /*********************************************Portfolio********************************************/
